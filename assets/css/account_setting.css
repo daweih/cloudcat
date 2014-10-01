@@ -1,0 +1,154 @@
+h1#title {
+	top:-30px;
+	left:20px;
+	position:absolute;
+	font: 80px 'Helvetica Neue UltraLight','Segoe UI',Arial,sans-serif;
+	color: white;
+}
+h2#subtitle {
+	top:28px;
+	left:380px;
+	position:absolute;
+	font: 40px 'Helvetica Neue UltraLight','Segoe UI',Arial,sans-serif;
+	color: white;
+}
+
+
+/*----------------------------
+	Styling the forms
+-----------------------------*/
+div.forms{
+	top: -2%;
+	width:1170px;
+	height:600px;
+	margin:0 auto;
+	position:relative;
+	z-index:1;
+	
+	-moz-perspective: 800px;
+	-webkit-perspective: 800px;
+	perspective: 800px;
+
+}
+#formContainer{
+	top:20px;
+	left:50px;
+	width:288px;
+	height:328px;
+	position:absolute;
+}
+#formContainer form{
+	width:100%;
+	height:100%;
+	border-radius:16px;
+	position:absolute;
+	top:0;
+	left:0;
+	
+	box-shadow:0 0 4px black;
+
+}
+
+div.title_login, div.title_batch{
+	opacity:0.9;
+	font: 30px 'Candara','Helvetica Neue Light','Candara Bold','Segoe UI',Arial,sans-serif;
+	color:white;
+	top: 40px;
+	left: 105px;
+	position: absolute;
+	text-shadow:0 0 8px black;
+}
+div.err
+{
+	font: 15px 'Candara Bold','Helvetica Neue Light','Candara Bold','Segoe UI',Arial,sans-serif;
+	color:LightCoral;
+	left: 36px;
+	position: absolute;
+
+}
+div.err{
+	top: 112px;
+}
+
+
+#login{
+	background:url('../../img/account_setting_resetPassword.png') no-repeat;
+	opacity:1;
+	z-index:100;
+}
+
+/*----------------------------
+	Inputs, Buttons & Links
+-----------------------------*/
+
+
+text#user_email{
+	top: 110px;
+/*	top: 108px;*/
+	left: 50px;
+	position: absolute;	
+	font: 14px 'Candara','Segoe UI',Arial,sans-serif;
+	color:white;
+
+}
+#first_name{
+	top: 140px;
+/*	top: 108px;*/
+	left: 36px;
+	position: absolute;	
+	font: 13px 'Helvetica Neue Light','Segoe UI',Arial,sans-serif;
+	color:#eee;
+}
+input[type=text],input[type=password]{
+	/* The text fields */
+	font: 13px 'Helvetica Neue Light','Segoe UI',Arial,sans-serif;
+	border: none;
+	background:none;
+/*	height: 36px;*/
+	height: 24px;
+	left: 36px;
+	position: absolute;
+	top: 172px;
+/*	top: 140px;*/
+	width: 210px;
+	text-indent: 8px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+	color:#eee;
+	outline:none;
+	letter-spacing:1.5px	
+}
+
+#loginPass{
+	top: 204px;
+/*	top: 172px;*/
+}
+#loginPassR{
+	top: 238px;
+}
+input[type=submit]{
+	
+	/* Submit button */
+	
+	opacity:0.8;
+	position:absolute;
+	top:284px;
+	left:60px;
+	width: 170px;
+	height:24px;
+	cursor:pointer;
+	border-radius:20px;
+	box-shadow:0 1px 1px #888;
+	border:none;
+	color:#eee;
+	background: black;
+	opacity:0.7;
+	font:13px 'Helvetica Neue Light','Segoe UI Light','Segoe UI',Arial,sans-serif;
+	letter-spacing:1.5px;
+}
+input[type=submit]:hover{
+	opacity:1;
+}
+
+input::-webkit-input-placeholder {
+    color:#eee;
+}

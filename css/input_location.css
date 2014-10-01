@@ -1,0 +1,36 @@
+table.grid tbody tr {
+height:10px;
+}
+table.grid tbody tr td {
+width:40px;
+height:20px;
+}
+
+table.grid tbody tr td a,a.page_rep_tag {
+	text-decoration: none;
+	font-size:12px;
+	color:white;
+	border-radius:10px;
+	background: black;
+	opacity:0.5;
+	padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+	margin-top:    0px;
+	margin-left:   0px;
+	margin-right:  0px;
+	margin-bottom: 0px;
+}
+a.page_rep_tag {
+	font-size:10px;
+	margin-right:  4px;
+}
+table.grid tbody tr td a input{
+	background: white;
+	margin-top:    0px;
+	margin-left:   0px;
+	margin-right:  0px;
+	margin-bottom: 0px;
+}
+

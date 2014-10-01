@@ -1,0 +1,266 @@
+    	html{
+			height:800px;
+    	}
+		div.canvas_cat {
+			-webkit-filter: blur(7px);
+			top:10%;
+			left:450px;
+			position:absolute;
+		}
+
+		div.container_err{
+			background:  url('img/0.png') no-repeat;
+			top: -2%;
+			width:1400px;
+			height:600px;
+			margin:0 auto;
+			position:relative;
+			z-index:1;
+	
+			-moz-perspective: 800px;
+			-webkit-perspective: 800px;
+/*			perspective: 800px;*/
+
+			box-shadow:0 0 10px black;
+		}
+		div.err{
+			font: 25px 'Helvetica Neue Light','Candara Bold','Segoe UI',Arial,sans-serif;
+			color:white;
+			top: 280px;
+			left: 136px;
+			position: absolute;
+			text-shadow:0 0 8px black;
+		}
+		h1#title {
+			top:20px;
+			left:20px;
+			position:absolute;
+			font: 80px 'Helvetica Neue UltraLight','Segoe UI',Arial,sans-serif;
+			color: white;
+		}
+		h2#subtitle {
+			top:58px;
+			left:380px;
+			position:absolute;
+			font: 40px 'Helvetica Neue UltraLight','Segoe UI',Arial,sans-serif;
+			color: white;
+		}
+    	foot {
+			border-top-color: rgb(221,221,221);
+			border-top-style: solid;
+			border-top-width: 1px;
+    	}
+		div.span4 {
+			border-right-color: rgb(221,221,221);
+			border-right-style: solid;
+			border-right-width: 1px;
+			width: 360px;
+			height: 800px;
+			overflow:auto;
+		}
+		div.span4 p {
+			width: 340px;
+			text-align: left;
+			font-family: 'Helvetica Neue Light';
+		}
+		div.span4 hr, div.span4 section {
+			width: 340px;
+		}
+		div.record_list {
+			width: 340px;
+			overflow:auto;
+		}
+		.axis path,
+		.axis line {
+		  fill: none;
+		  stroke: #000;
+		  shape-rendering: crispEdges;
+		}
+
+
+		@font-face {
+			font-family: 'Helvetica Neue UltraLight';
+			src: url('./font/helvetica_neue_ultralight.ttf');
+		}
+		@font-face {
+			font-family: 'Helvetica Neue Light';
+			src: url('./font/helvetica_neue_light.ttf');
+		}
+		@font-face {
+			font-family: 'Helvetica Neue';
+			src: url('./font/helvetica_neue.ttf');
+		}
+		@font-face {
+			font-family: 'Helvetica Neue Bold';
+			src: url('./font/helvetica_neue_bold.ttf');
+		}
+		@font-face {
+			font-family: 'Helvetica';
+			src: url('./font/helvetica.ttf');
+		}
+		@font-face {
+			font-family: 'Corbel Bold';
+			src: url('./font/corbel_bold.ttf');
+		}
+		@font-face {
+			font-family: 'Calisto MT';
+			src: url('./font/calisto_mt.ttf');
+		}
+			@font-face {
+				font-family: 'Candara Bold';
+				src: url('./font/candara_bold.ttf');
+			}
+			@font-face {
+				font-family: 'Candara';
+				src: url('./font/candara.ttf');
+			}
+
+		.ie          svg g.arc {
+			font: 15px 'Helvetica'
+		}
+		.ie7         svg g.arc {
+			font: 15px 'Helvetica'
+		}
+		.gecko       svg g.arc {
+			font: 15px 'Helvetica'
+		}
+		.win.gecko   svg g.arc {
+			font: 15px 'Helvetica'
+		}
+		.linux.gecko svg g.arc {
+			font: 15px 'Helvetica'
+		}
+		.opera       svg g.arc{
+			font: 15px 'Helvetica'
+		}
+		.konqueror   svg g.arc{
+			font: 15px 'Helvetica'
+		}
+		/* safari*/
+		.webkit      svg g.arc{
+			font: 15px 'Helvetica Neue Light'
+		}
+		.firefox     svg g.arc{
+			font: 15px 'Helvetica'
+		}
+		.chrome      svg g.arc{
+			font: 15px 'Helvetica Neue'
+		}
+		body {
+			font: 15px 'Helvetica', 'Helvetica Neue UltraLight', 'Helvetica Neue';
+			height: 1060px;
+		}
+		.arc text, .up_and_down {
+			cursor: pointer;
+		}		
+/*CSS Cursor Values implying connection to staturs type, sta, and name.*/		
+		g.codon, g.arc, g#current_genetic_codon_table {
+			cursor: context-menu;
+		}
+/*up down button information window*/
+		.seq_id, .float_card {
+			font-family: 'Helvetica Neue UltraLight';
+		}
+		g.status text.name, .status text.type, .status text.sta {
+			font-family: 'Helvetica Neue Light';
+		}
+/*up down button information window*/
+	    h2, h3, .masthead p, .subhead p, .marketing h2, .lead, .float_cell
+		{
+		  font-family: "Helvetica", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+		  font-weight: normal;
+		}
+		.label .float_cell{
+			font-family: "Helvetica";
+		}
+	    h1
+		{
+		  font-family: "Helvetica Neue UltraLight", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+		  font-weight: normal;
+		}
+		/*----------------------------
+			The Footer
+		-----------------------------*/
+
+		.navbar {
+			opacity:0.8;
+			background-color: white;
+			background-image:none;
+		}
+		footer{
+			background-color: #111111;
+			opacity:0.8;
+			bottom: 0;
+			box-shadow: 0 -1px 2px #111111;
+			height: 45px;
+			left: 0;
+			position: fixed;
+			width: 100%;
+			z-index: 100000;
+		}
+		footer h2{
+			color: #EEEEEE;
+			font:16px 'Helvetica Neue Light','Segoe UI Light','Segoe UI',Arial,sans-serif;
+			font-weight: normal;
+			left: 40.4%;
+			margin-left: -400px;
+			padding: 5px 0 0;
+			position: absolute;
+			width: 540px;
+		}
+		footer div#p-logo {
+			left: 48.5%;
+			position: absolute;
+		}
+		footer h2 i{
+			font-style:normal;
+			color:#888;
+		}
+		footer a.tzine,a.tzine:visited{
+			color: #999999;
+			font:16px 'Helvetica Neue Light','Segoe UI Light','Segoe UI',Arial,sans-serif;
+			left: 56.5%;
+			margin: 16px 0 0 110px;
+			position: absolute;
+			text-decoration: none;
+			top: 0;
+		}
+
+		footer a i{
+			color:#ccc;
+			font-style: normal;
+		}
+		footer a i b{
+			color:#c92020;
+			font-weight: normal;
+		}
+		.regular-checkbox {
+			-webkit-appearance: none;
+			border: 1px solid #cacece;
+			padding: 5px;
+			display: inline-block;
+			position: relative;
+			top: -2px;
+		}
+
+		.regular-checkbox:active, .regular-checkbox:checked:active {
+		}
+
+		.regular-checkbox:checked {
+			border: 1px solid #adb8c0;
+			color: #99a1a7;
+		}
+		.regular-checkbox:disabled {
+			border: 1px solid #e9ecee;
+			color: #99a1a7;
+		}
+
+		.regular-checkbox:checked:after {
+			content: '\2713';
+			font: 16px 'Helvetica Neue UltraLight';
+			position: absolute;
+			top: -4px;
+			left: 0px;
+			color: #99a1a7;
+		}
+

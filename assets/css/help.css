@@ -1,0 +1,141 @@
+@-moz-document url-prefix() 
+{
+	div#codon_table{
+		position:absolute;
+		margin-left: 120px;
+		transform: scale(0.98);
+	}
+	div.figure{
+        transform: scale(0.7);
+	}
+	div.figure div{
+	transform: scale(0.7);
+	}
+}
+div.figure{
+	margin-bottom: 40px;
+	zoom:0.8;
+}
+div.figure div{
+	width:1440px;
+	border-radius:10px;
+	box-shadow: 0 0 2px black;
+}
+
+div.figure p{
+	font-size: 95%;
+	font-family: 'Helvetica Neue';
+	color: black;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+div.figure img{
+border-radius:10px;
+}
+div#fig_download_panel{
+}
+div#fig_rscu_aa_panel {
+}
+div#login{
+	position:absolute;
+}
+
+div#codon_table{
+	position:absolute;
+	margin-left: 120px;
+	zoom:0.98;
+}
+div.outside{
+perspective:800px;
+-webkit-perspective:800px; /* Safari and Chrome */
+
+}
+div.inside{
+	transform: rotateY(-15deg);
+	-webkit-transform: rotateY(-15deg); /* Safari and Chrome */
+	position: relative;
+	box-shadow: 0 0 8px black;
+	border-radius:2px;	
+
+}
+div.inside img {
+	border-radius:2px;	
+}
+dt.l2 {
+	left: 20px;
+	position: relative;	
+}
+dt.l3 {
+        left: 40px;
+        position: relative;
+}
+
+td.page_title{
+	font-size: 380%;
+	font-family: 'Helvetica Neue UltraLight';
+	color: steelblue;
+	
+}
+td.table_of_content {
+	width: 300px;
+	font-family: sans-serif;
+	font-size: 100%;
+	line-height: 1.5;
+}
+td.screenshot {
+	padding-top:20px;
+	width: 500px;
+}
+td.content {
+	font-family: Georgia,sans-serif;
+	font-size: 100%;
+	line-height: 1.5;
+}
+
+footer{
+        background-color: #111111;
+        opacity:0.8;
+        bottom: 0;
+        box-shadow: 0 -1px 2px #111111;
+        height: 45px;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 100000;
+}
+footer h2{
+        color: #EEEEEE;
+        font:16px 'Helvetica Neue Light','Segoe UI Light','Segoe UI',Arial,sans-serif;
+        font-weight: normal;
+        left: 40.4%;
+        margin-left: -400px;
+        padding: 5px 0 0;
+        position: absolute;
+        width: 540px;
+}
+footer div#p-logo {
+        left: 48.5%;
+        position: absolute;
+}
+footer h2 i{
+        font-style:normal;                                                                                                                                        
+        color:#888;                                                                                                                                               
+}                                                                                                                                                                 
+footer a.tzine,a.tzine:visited{                                                                                                                                   
+        color: #999999;                                                                                                                                           
+        font:16px 'Helvetica Neue Light','Segoe UI Light','Segoe UI',Arial,sans-serif;                                                                            
+        left: 56.5%;                                                                                                                                              
+        margin: 16px 0 0 110px;                                                                                                                                   
+        position: absolute;                                                                                                                                       
+        text-decoration: none;                                                                                                                                    
+        top: 0;                                                                                                                                                   
+}                                                                                                                                                                 
+footer a i{                                                                                                                                                       
+        color:#ccc;                                                                                                                                               
+        font-style: normal;                                                                                                                                       
+}                                                                                                                                                                 
+footer a i b{                                                                                                                                                     
+        color:#c92020;                                                                                                                                            
+        font-weight: normal;                                                                                                                                      
+}                                                                                                                                                                 
+

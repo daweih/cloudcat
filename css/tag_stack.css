@@ -1,0 +1,36 @@
+.column { width: 140px; float: right; cursor:move;}
+.portlet { margin: 0 0.5em 0.5em 0; }
+.portlet-header { height: 12px; font: 12px 'Helvetica Neue'; margin: 0.2em; padding-bottom: 4px; padding-left: 0.4em; }
+.portlet-header .ui-icon { float: right; cursor:pointer;}
+.portlet-content { padding: 0.4em; font: 12px 'Helvetica Neue Light';}
+.ui-sortable-placeholder { border: 1px dotted black; visibility: visible;}
+.ui-sortable-placeholder { visibility: hidden; }
+.portlet-header span.ui-icon {font: 10px;}
+rect:hover {
+	fill: orange;
+}
+input.tag_compare[type=submit]{
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	height:14px;
+	width: 90px;
+
+	background: white;
+	border-radius:20px;
+	border:gray;
+	box-shadow: black 0px 0px 6px;
+	font:10px 'Candara Bolt','Segoe UI Light','Segoe UI',Arial,sans-serif;
+/*	letter-spacing:1px;*/
+	cursor:pointer;
+
+/*			
+.ui-widget-header {
+	border: 1px solid #aaaaaa;
+	background: steelblue;
+	color: #222222;
+	font-weight: bold;
+}
+*/

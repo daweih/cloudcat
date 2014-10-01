@@ -1,0 +1,21 @@
+			div.record_list table .header {
+				font: 13px "Helvetica Neue";
+				border:solid gray; /* 设置边框属性；样式(solid=实线)、颜色(#999=灰) */
+				border-width:1.5px 0 1px 0px; /* 设置边框状粗细：上 右 下 左 = 对应：1px 0 0 1px */
+				height:20px;
+			}
+			div.record_list table .table_content {
+				font: 12px "Helvetica Neue Light";
+			}
+			div.record_list table .table_content tr {
+				height:20px;
+			}
+			div.record_list table {
+			border-collapse:collapse; /* 关键属性：合并表格内外边框(其实表格边框有2px，外面1px，里面还有1px哦) */
+			border:solid gray; /* 设置边框属性；样式(solid=实线)、颜色(#999=灰) */
+			border-width:2px 0 2px 0px; /* 设置边框状粗细：上 右 下 左 = 对应：1px 0 0 1px */
+/*			margin-top: 2px;
+			margin-bottom: 2px;*/
+			}
+
+			div.record_list table caption {font-size:10px;font-weight:bolder;}

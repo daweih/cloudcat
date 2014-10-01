@@ -1,0 +1,130 @@
+    	foot {
+			border-top-color: rgb(221,221,221);
+			border-top-style: solid;
+			border-top-width: 1px;
+    	}
+		div.span4 {
+			border-right-color: rgb(221,221,221);
+			border-right-style: solid;
+			border-right-width: 1px;
+			width: 360px;
+			height: 820px;
+			overflow:auto;
+		}
+		div.span4 p {
+			width: 340px;
+			text-align: left;
+			font: 'Helvetica Neue Light'
+		}
+		div.span4 hr, div.span4 section {
+			width: 340px;
+		}
+		div.record_list {
+			width: 340px;
+			height: 75px;
+			overflow:auto;
+		}
+		.axis path,
+		.axis line {
+		  fill: none;
+		  stroke: #000;
+		  shape-rendering: crispEdges;
+		}
+
+
+		@font-face {
+			font-family: 'Helvetica Neue UltraLight';
+			src: url('./font/helvetica_neue_ultralight.ttf');
+		}
+		@font-face {
+			font-family: 'Helvetica Neue Light';
+			src: url('./font/helvetica_neue_light.ttf');
+		}
+		@font-face {
+			font-family: 'Helvetica Neue Bold';
+			src: url('./font/helvetica_neue_bold.ttf');
+		}
+		@font-face {
+			font-family: 'Helvetica';
+			src: url('./font/helvetica.ttf');
+		}
+		@font-face {
+			font-family: 'Corbel Bold';
+			src: url('./font/corbel_bold.ttf');
+		}
+		@font-face {
+			font-family: 'Calisto MT';
+			src: url('./font/calisto_mt.ttf');
+		}
+			@font-face {
+				font-family: 'Candara Bold';
+				src: url('./font/candara_bold.ttf');
+			}
+			@font-face {
+				font-family: 'Candara';
+				src: url('./font/candara.ttf');
+			}
+
+		.ie          svg g.arc {
+			font-family: 15px 'Helvetica'
+		}
+		.ie7         svg g.arc {
+			font-family: 15px 'Helvetica'
+		}
+		.gecko       svg g.arc {
+			font-family: 15px 'Helvetica'
+		}
+		.win.gecko   svg g.arc {
+			font-family: 15px 'Helvetica'
+		}
+		.linux.gecko svg g.arc {
+			font-family: 15px 'Helvetica'
+		}
+		.opera       svg g.arc{
+			font-family: 15px 'Helvetica'
+		}
+		.konqueror   svg g.arc{
+			font-family: 15px 'Helvetica'
+		}
+		/* safari*/
+		.webkit      svg g.arc{
+			font-family: 15px 'Helvetica Neue Light'
+		}
+		.firefox     svg g.arc{
+			font-family: 15px 'Helvetica'
+		}
+		.chrome      svg g.arc{
+			font-family: 15px 'Helvetica Neue'
+		}
+		body {
+			font: 15px 'Helvetica', 'Helvetica Neue UltraLight', 'Helvetica Neue';
+		}
+		.arc text, .up_and_down {
+			cursor: pointer;
+		}		
+/*CSS Cursor Values implying connection to staturs type, sta, and name.*/		
+		g.codon, g.arc, g#current_genetic_codon_table {
+			cursor: context-menu;
+		}
+/*up down button information window*/
+		.seq_id, .float_card {
+			font-family: 'Helvetica Neue UltraLight';
+		}
+		g.status text.name, .status text.type, .status text.sta {
+			font-family: 'Helvetica Neue Light';
+		}
+/*up down button information window*/
+	    h2, h3, .masthead p, .subhead p, .marketing h2, .lead, .float_cell
+		{
+		  font-family: "Helvetica", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+		  font-weight: normal;
+		}
+		.label .float_cell{
+			font-family: "Helvetica";
+		}
+	    h1
+		{
+		  font-family: "Helvetica Neue UltraLight", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+		  font-weight: normal;
+		}
+

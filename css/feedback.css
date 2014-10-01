@@ -1,0 +1,113 @@
+section#tabs.page_type {
+	width:1000px;
+    height: 650px;
+}
+form.usr {
+	font-size:12px;
+}
+
+form.usr div.cloud_cat_page {
+	margin-top:    10px;
+	margin-left:   10px;
+	margin-right:  10px;
+	margin-bottom: 10px;
+	width:640px;
+	height:600px;
+	background:url('../img/fig_svg.png') no-repeat;
+	border-radius:4px;
+	box-shadow: 0 0 6px black;
+}
+form.usr select {
+	height:18px;
+	width:120px;
+	font-size:12px;
+	padding: 0px 0px;
+	margin-top:    0px;
+	margin-left:   0px;
+	margin-right:  0px;
+	margin-bottom: 0px;
+
+}
+form.usr textarea {
+	overflow-y:visible;
+	max-width:300px;
+	margin-top:    10px;
+	margin-left:   10px;
+	margin-right:  10px;
+	margin-bottom: 10px;
+
+}
+form.usr textarea.title {
+	margin-bottom:    5px;
+	width:300px;
+	max-height:100px;
+	height:20px;
+}
+form.usr textarea.content {
+	margin-top:    0px;
+	width:300px;
+	height:180px;
+	max-height:380px;
+}
+p.type_select_text, a#anonymous, a#feedback {
+	margin-top:    10px;
+	margin-left:   10px;
+	margin-right:  10px;
+	margin-bottom: 10px;
+}
+a#anonymous {
+	text-decoration: none;
+	font-size:12px;
+	color:black;
+}
+a#feedback {
+	font-size:20px;
+}
+a#anonymous input{
+	margin-top:    0px;
+	margin-left:   0px;
+	margin-right:  0px;
+	margin-bottom: 0px;
+}
+
+section.history {
+	width:470px;
+	margin-left: 20px;
+	margin-right: 10px;
+}
+div#registered_user, div#registered_user_title, div#registered_user_email{
+	width:470px;
+	margin-left:10px;
+	margin-right:20px;
+}
+
+hr#post {
+    width: 450px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+div#php_history h5.title {
+	color:steelblue;
+font-weight: lighter;
+}
+h5.title {
+	font-family:sans-serif;
+	font-size:14px;
+}
+h6 {
+	color: gray;
+font-weight: lighter;
+	width: 450px;
+}
+div#page_rep_search_result p.content, div#php_history p.content, div#registered_user p.content {
+width: 450px;
+}
+input#page_rep_search {
+	height:20px;
+	width:360px;
+	font-size:12px;
+	border-radius:16px;
+	padding: 0px 8px;	
+	margin-left:10px;
+
+}

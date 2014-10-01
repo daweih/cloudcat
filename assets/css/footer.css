@@ -1,0 +1,148 @@
+body{
+	background-position: 0% 0%;
+	background-attachment:fixed;
+ 	position:absolute;
+	width: 100%;
+	height: 700px;
+	min-height: 700px;
+}
+/*----------------------------
+	LOGO
+-----------------------------*/
+			div.canvas_cat {
+				-webkit-filter: blur(2px);
+				top:15px;
+				left:3.4%;
+				position:absolute;
+				zoom: 1.6;
+			}
+/*----------------------------
+	browsers download link
+-----------------------------*/
+div.browsers {
+	zoom:0.75;
+	top: 8%;
+	left: 90%;
+	position:absolute;
+	width:282px;
+	height:48px;
+}
+@-moz-document url-prefix() {
+div.browsers {
+        transform: scale(0.75);
+        top: 4.5%;
+        left: 87%;
+
+    }
+}
+div.apple, p.apple {
+	left:10px;
+	top:720px;
+	position:absolute;
+	width:24px;
+	height:24px;
+}
+ p.apple {
+	font:8px 'Helvetica Neue Light','Segoe UI Light','Segoe UI',Arial,sans-serif;
+	color: white;
+	opacity: 0.5;
+	left:32px;
+	top:722px;
+	position:absolute;
+	width:100px;
+	height:24px;
+}
+a.firefox, a.Chrome, a.Safari, a.Opera, a.InternetExplorer, a.QuickTime {
+	top:5px;
+	position:absolute;
+	width:40px;
+	height:40px;
+}
+a.Safari {
+	left:5px;
+}
+a.QuickTime {
+	left:50px;
+}
+a.Chrome {
+	left:90px;
+}
+a.firefox {
+	left:135px;
+}
+a.Opera {
+	left:180px;
+}
+a.InternetExplorer {
+	left:220px;
+}
+
+div.container{
+	top: -2%;
+	width:1200px;
+	height:700px;
+	margin:0 auto;
+	position:relative;
+	z-index:1;
+	
+	-moz-perspective: 700px;
+	-webkit-perspective: 700px;
+	perspective: 700px;
+
+	box-shadow:0 0 10px black;
+}
+
+footer{
+/*control the level of the foot*/
+	top:93.5%;
+
+	background-color: #111111;
+	opacity:0.8;
+	bottom: 0;
+	box-shadow: 0 -1px 2px #111111;
+	height: 45px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 100000;
+}
+footer h2{
+	color: #EEEEEE;
+	font:16px 'Helvetica Neue Light','Segoe UI Light','Segoe UI',Arial,sans-serif;
+	font-weight: normal;
+	left: 35%;
+	margin-left: -400px;
+	padding: 2px 0 0;
+	position: absolute;
+	width: 500px;
+}
+footer h2.support_browser{
+	color: #EEEEEE;
+	font:16px 'Helvetica Neue Light','Segoe UI Light','Segoe UI',Arial,sans-serif;
+	font-weight: normal;
+	left: 110%;
+	padding: 2px 0 0;
+	position: absolute;
+}
+footer div#p-logo {
+	left: 48%;
+	position: absolute;
+}
+footer h2 i{
+	font-style:normal;
+	color:#888;
+}
+footer a.tzine,a.tzine:visited{
+	color: DodgerBlue;
+	font:17px 'Helvetica','Segoe UI Light','Segoe UI',Arial,sans-serif;
+	font-weight: normal;
+	left: 72%;
+	margin: 14px 0 0 0px;
+	position: absolute;
+	text-decoration: none;
+}
+footer a i{
+	font-style: normal;
+}
+footer a i b{
+}
