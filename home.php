@@ -1,102 +1,4 @@
 <?php
-	include ("php/url_encode.php");
-			date_default_timezone_set("Asia/Hong_Kong");
-			$date = date("Y-m-d G:i:s");
-			$no = $_POST["loginCodonTable"];
-			$genetic_code_array = array("1", "2", "3", "4", "5", "6", "9", "10", "11", "12", "13", "14", "15", "16", "21", "22", "23", "24", "25");
-			$cat_genetic_code = $genetic_code_array[$no-1];
-
-			$gp_file_path_name = "";
-			$gp_personID = "";
-			$rec_cnt = 0;                                                                                       
-			$old_rec_genetic_code = "";
-			$gp_seq_ids = "";
-
-			$con = mysql_connect("localhost:port", "usr","password");
-			if (!$con){die('Could not connect: ' . mysql_error());}
-			mysql_select_db("dbcloudcat", $con);
-
-	
-			#设置cookie或提取cookie内容，得到工作路径
-			if (isset($_COOKIE['cat_tags'])) {
-				$old_date = "";
-				foreach ($_COOKIE['cat_tags'] as $name => $value) {
-					#echo "$name : ", base64url_decode($value), " <br />\n";
-					if($name=="gp_personID"){
-						$old_personID = base64url_decode($value);
-					}
-					if($name=="created_date"){
-						$old_date     = base64url_decode($value);
-					}
-					if($name=="genetic_code"){
-						$old_rec_genetic_code = $value;
-					}
-				}
-				
-				#二次验证时间和personID的对应关系
-				$result = mysql_query("select personID from usr WHERE Date='$old_date' AND personID='$old_personID'");
-				while($row =mysql_fetch_array($result)){
-					$gp_personID = $row['personID'];
-				}
-			if($_POST["loginCodonTable"]){
-				if($old_rec_genetic_code==""){
-						####################################################################
-						setcookie("cat_tags[genetic_code]", $cat_genetic_code);
-						####################################################################
-				}
-				else{
-					if($old_rec_genetic_code!=$cat_genetic_code){
-						####################################################################
-						setcookie("cat_tags[created_date]", base64url_encode($date));
-						setcookie("cat_tags[genetic_code]", $cat_genetic_code);
-						####################################################################
-						$gp_file_name = $_FILES["file"]["name"];
-						#新建用户记录
-						$sql="INSERT INTO usr (Date) VALUES ('$date')";
-						mysql_query($sql, $con);
-						$result = mysql_query("select personID from usr WHERE Date='$date'");
-						while($row =mysql_fetch_array($result)){
-							$gp_personID = $row['personID'];
-							###################################################################
-							setcookie("cat_tags[gp_personID]",  base64url_encode($gp_personID));
-							###################################################################
-						}	
-echo '<script>alert(\'You are using different genetic code from previous access (ID: '. $old_personID. '.DO remember this for data retrieve). Running a new accession (ID: '. $gp_personID. ')... \');</script>';
-					}
-				}
-			}
-
-				#验证已经存在的记录的密码子表是否和之前的一致。则继续；否则要求用户新建一个进程。
-				$page_rep = mysql_query("select ID,genetic_code from fasta where usrID='".$gp_personID ."'");                    
-				while($row = mysql_fetch_array($page_rep)){                                                         
-				        $rec_cnt++;                                                                                 
-				}
-				#echo $gp_file_path_name, "<br><br><br><br><br>";
-
-			}else{
-
-				####################################################################
-				setcookie("cat_tags[created_date]", base64url_encode($date));
-				####################################################################
-		
-
-				$gp_file_name = $_FILES["file"]["name"];
-		
-				#新建用户记录
-				$sql="INSERT INTO usr (Date) VALUES ('$date')";
-				mysql_query($sql, $con);
-		
-		
-				$result = mysql_query("select personID from usr WHERE Date='$date'");
-				while($row =mysql_fetch_array($result)){
-					$gp_personID = $row['personID'];
-
-					####################################################################
-					setcookie("cat_tags[gp_personID]",  base64url_encode($gp_personID));
-					####################################################################
-
-				}
-			}
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -449,7 +351,7 @@ echo '<script>alert(\'You are using different genetic code from previous access 
 	
 <!--check password;copy files;CAT;-->
 	<?php
-		include ("svg_series_php_container.php");
+		include ("php/svg_series_php_container.php");
 	?>
 	<?php
 		if($_FILES["file"]["name"] || $_POST["fasta_text"]){
@@ -487,8 +389,8 @@ echo '<script>alert(\'You are using different genetic code from previous access 
 						#echo $gp_file_path_name, "<br>";
 						$cds = $gp_file_path_name;
 						$cat = "$gp_file_path_name.cat";
-						include("fasta2mysql.php");
-						include("cat2mysql.php");
+						include("php/fasta2mysql.php");
+						include("php/cat2mysql.php");
 
 						foreach($hash_fasta as $id) {
 							$recID = $id["id"];
@@ -514,8 +416,8 @@ echo '<script>d3.select("p.fig_implementation").append("text").style("font-size"
 						#echo $gp_file_path_name, "<br>";
 						$cds = $gp_file_path_name;
 						$cat = "$gp_file_path_name.cat";
-						include("fasta2mysql.php");
-						include("cat2mysql.php");
+						include("php/fasta2mysql.php");
+						include("php/cat2mysql.php");
 
 						foreach($hash_fasta as $id) {
 							$recID = $id["id"];
@@ -539,14 +441,14 @@ echo '<script>d3.select("p.fig_implementation").append("text").style("font-size"
 			$data_type= "demo";
 			if($_POST["cenus"][0]=="cat_data"){
 $no = 1;
-include ("DEMO.php");
+include ("php/DEMO.php");
 echo '<script>d3.select("p.download_data_file").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "red").text("Download DEMO data: ");</script>';
 echo '<script>d3.select("p.fig_implementation").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "#08c").text("Implement fig. based on DEMO data: ");</script>';
 
 			}
 			elseif($_POST["cenus"][0]=="tag3"){
 $no = 1;
-include ("DEMO_tag3.php");
+include ("php/DEMO_tag3.php");
 echo '<script>d3.select("p.download_data_file").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "red").text("Download DEMO data: ");</script>';
 echo '<script>d3.select("p.fig_implementation").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "#08c").text("Implement fig. based on DEMO data: ");</script>';
 
@@ -554,21 +456,21 @@ echo '<script>d3.select("p.fig_implementation").append("text").style("font-size"
 			}
                         elseif($_POST["cenus"][0]=="m"){
 $no = 9;
-include ("DEMO_Mycobacterium.php");
+include ("php/DEMO_Mycobacterium.php");
 echo '<script>d3.select("p.download_data_file").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "red").text("Download DEMO data: ");</script>';
 echo '<script>d3.select("p.fig_implementation").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "#08c").text("Implement fig. based on DEMO data: ");</script>';
 
                         }
                         elseif($_POST["cenus"][0]=="s"){
 $no = 9;
-include ("DEMO_Shewanella.php");
+include ("php/DEMO_Shewanella.php");
 echo '<script>d3.select("p.download_data_file").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "red").text("Download DEMO data: ");</script>';
 echo '<script>d3.select("p.fig_implementation").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "#08c").text("Implement fig. based on DEMO data: ");</script>';
 
                         }
 			elseif($_POST["cenus"][0]=="e1"){
 $no = 9;
-include ("DEMO_dnaE1.php");
+include ("php/DEMO_dnaE1.php");
 echo '<script>d3.select("p.download_data_file").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "red").text("Download DEMO data: ");</script>';
 echo '<script>d3.select("p.fig_implementation").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "#08c").text("Implement fig. based on DEMO data: ");</script>';
 
@@ -576,14 +478,14 @@ echo '<script>d3.select("p.fig_implementation").append("text").style("font-size"
 			}
 			elseif($_POST["cenus"][0]=="e2"){
 $no = 9;
-include ("DEMO_dnaE2.php");
+include ("php/DEMO_dnaE2.php");
 echo '<script>d3.select("p.download_data_file").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "red").text("Download DEMO data: ");</script>';
 echo '<script>d3.select("p.fig_implementation").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "#08c").text("Implement fig. based on DEMO data: ");</script>';
 
 			}
 			elseif($_POST["cenus"][0]=="e3"){
 $no = 9;
-include ("DEMO_dnaE3.php");
+include ("php/DEMO_dnaE3.php");
 echo '<script>d3.select("p.download_data_file").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "red").text("Download DEMO data: ");</script>';
 echo '<script>d3.select("p.fig_implementation").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "#08c").text("Implement fig. based on DEMO data: ");</script>';
 
@@ -605,21 +507,21 @@ echo '<script>d3.select("p.fig_implementation").append("text").style("font-size"
 
 					if($old_person_rec_cnt){
 						$data_type = "user";
-						include("old_person.php");
+						include("php/old_person.php");
 echo '<script>d3.select("p.download_data_file").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "red").text("Download Result: ");</script>';
 echo '<script>d3.select("p.fig_implementation").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "#08c").text("Implement fig. based on DEMO data: ");</script>';
 
 					}else{
 						echo '<script>alert(\'Found no data under this user (ID: '. $gp_personID. '). Go on with DEMO. \');</script>';
 						$no = 1;
-						include ("DEMO_tag3.php");
+						include ("php/DEMO_tag3.php");
 echo '<script>d3.select("p.download_data_file").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "red").text("Download DEMO data: ");</script>';
 echo '<script>d3.select("p.fig_implementation").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "#08c").text("Implement fig. based on DEMO data: ");</script>';
 
 					}
 				}else{
 $no = 1;
-include ("DEMO2.php");
+include ("php/DEMO2.php");
 echo '<script>d3.select("p.download_data_file").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "red").text("Download DEMO data: ");</script>';
 echo '<script>d3.select("p.fig_implementation").append("text").style("font-size", "14px").style("text-decoration", "none").style("color", "#08c").text("Implement fig. based on DEMO data: ");</script>';
 
@@ -875,7 +777,7 @@ d3.tsv("php/tag.js.sql.php?usrID="+gp_personIDen, function(tag_group) {
 //		console.log(sorted_tag_group_name_id);
 //		window.open("../wheel/tag_wheel.php","width=200,height=100");
 //		window.open("../dynamic_web/wheel/tag_wheel.php?tag_group="+sorted_tag_group_name_id+"&ID="+gp_personID);
-		window.open("tag_wheel.php?tag_group="+sorted_tag_group_name_id+",&ID="+gp_personID+"&gp_fasta_file="+gp_fasta_file+"&gp_genetic_code_no="+gp_genetic_code_no);
+		window.open("php/tag_wheel.php?tag_group="+sorted_tag_group_name_id+",&ID="+gp_personID+"&gp_fasta_file="+gp_fasta_file+"&gp_genetic_code_no="+gp_genetic_code_no);
 
 	});
 
@@ -947,7 +849,7 @@ d3.tsv("php/tag.js.sql.php?usrID="+gp_personIDen, function(tag_group) {
 							fig_id = select_class+"-"+gp_files[gp_rec_no];
 							fig_win[fig_id] = svg_code;
 
-							window.open("fig.php?fig_id="+fig_id+"&fig=on",
+							window.open("php/fig.php?fig_id="+fig_id+"&fig=on",
 								"_blank",
 								"toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=no, copyhistory=yes, width=600, height=570",
 								false
@@ -1105,7 +1007,7 @@ d3.tsv("php/tag.js.sql.php?usrID="+gp_personIDen, function(tag_group) {
 <script src="js/rscu_aa.js"></script>
 <!--<script src="js/scatterplot.js"></script>-->
 <?php
-	include ("svg_series_php_footer.php");
+	include ("php/svg_series_php_footer.php");
 ?>
 </body>
 

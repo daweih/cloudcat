@@ -9,7 +9,7 @@ Cloud Composition Analysis Toolkit (Cloud CAT) is a web-based tool that integrat
 
 ![Fig. 1: Windows and panels on Cloud CAT.](https://github.com/daweih/cloudcat/blob/master/images/cloud_cat_v5.jpg)
 
-Want to learn more, here are more informations:
+Want to learn more?
 
 - [Wiki Cloud CAT](https://github.com/daweih/cloudcat/wiki)
 - [Help page for Cloud CAT](http://cat.big.ac.cn/help.php)
