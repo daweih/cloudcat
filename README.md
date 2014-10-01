@@ -14,6 +14,9 @@ Want to learn more?
 - [Wiki Cloud CAT](https://github.com/daweih/cloudcat/wiki)
 - [Help page for Cloud CAT](http://cat.big.ac.cn/help.php)
 - [Composition Analysis Toolkit (standalone version)](https://code.google.com/p/composition-analysis-toolkit)
+- [About the author of CAT](http://cbb.big.ac.cn/Zhang_Zhang)
+- [About the creater of Cloud CAT](http://cbb.big.ac.cn/Dawei_Huang)
+
 
 ## REFERENCES
 
