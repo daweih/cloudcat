@@ -7,7 +7,21 @@ A cloud application for analysis and visualization of molecular sequence composi
 
 Cloud Composition Analysis Toolkit (Cloud CAT) is a web-based tool that integrates the server-side capabilities for composition analysis with the browser-based technology for interactive visualization of molecular sequence composition.
 
-![Fig. 1: Windows and panels on Cloud CAT.](https://github.com/daweih/cloudcat/blob/master/images/cloud_cat_v5.jpg)
+[Fig. 1: Windows and panels on Cloud CAT.](https://github.com/daweih/cloudcat/blob/master/images/cloud_cat_v5.jpg)
+
+Cloud CAT has four window, including analysis-visualization window (fig. 1, No. 1), help window, report window, and genetic code window. Functional modules are organized in collapsible component which can hide or show when required.
+
+## Data upload and analysis
+
+Cloud CAT accepts multi-sequences data in fasta format which can be pasted directly or uploaded in a file through “input sequence” module (No. 2). Select proper genetic code number and click “start”. Result in text format file and package for implementation of visualization are available in the “Download” tab. There are several examples in the DEMO tab.
+
+## Visual data exploration
+
+Results are listed in the sortable table on the left of main window (No. 1). Visualize each record by clicking on table or pressing up and down button in the “information panel” (No.3 in orange box) and corresponding record will turn red. Select record by checking in red box. Click “COMPARE” button will execute comparison analysis in a new window (No. 4) when multi-records are checked. Checked records will be removed after page refresh when click the “DELETE” button. Sequence composition data are visualized in two rearranged forms of codon table, pendulum model and partition (No. 5). The “point” action through the mouse on codon or amino acid sector in the visualization will trigger changes in the “information panel”, showing type, name and usage information on pointed sector in detail. The “click” action will trigger changes in the “amino acid information” module (No. 7),  showing name, structure and side chain polarity, and “RSCU” module (No. 8), showing a bar chart while amino acid with synonymous codons is clicked. User can get information in detail while interacting with figures by different mouse actions. Use download module in green box to get static figures.
+
+## Comparison analysis
+
+There are seven examples listed under the DEMO tab in “input sequence” module. The dnaE-based grouping scheme has been proven biological justified when concerning the correlation between bacteriological features and sequence composition (Wu et al., 2012). Joined CDSs of each bacteria were used as inputs in 5 dnaE-based examples. When the GC content variation is concerned, sequence composition analysis and visualization showed distinct trend of unbalanced codon usage: bacteria with moderate GC content tend to have more balanced codon usage, whereas bacteria with high or low GC content exhibit a bias codon usage pattern. After sorted by GC content in sortable table,  bacteria with similar GC content have higher cosine similarity score in comparison analysis.
 
 Want to learn more?
 
