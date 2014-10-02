@@ -7,7 +7,8 @@ A cloud application for analysis and visualization of molecular sequence composi
 
 Cloud Composition Analysis Toolkit (Cloud CAT) is a web-based tool that integrates the server-side capabilities for composition analysis with the browser-based technology for interactive visualization of molecular sequence composition.
 
-[Fig. 1: Windows and panels on Cloud CAT.](https://github.com/daweih/cloudcat/blob/master/images/cloud_cat_v5.jpg)
+![Fig. 1: Windows and panels on Cloud CAT.](https://github.com/daweih/cloudcat/blob/master/images/cloud_cat_v5.jpg)
+Fig. 1: Windows and panels on Cloud CAT.
 
 Cloud CAT has four window, including analysis-visualization window (fig. 1, No. 1), help window, report window, and genetic code window. Functional modules are organized in collapsible component which can hide or show when required.
 
