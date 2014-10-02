@@ -1,0 +1,25 @@
+CAT is written in standard C++, so that it is readily compiled and platform-independent.
+
+HOW TO INSTALL
+
+1. For compilation, you need a GNU C++ compiler (g++/gcc). Please see more information at 
+http://gcc.gnu.org/. 
+
+2. Just type 'make' command to compile on your specific platform. That's it.
+
+
+CONTACT INFO
+
+Zhang Zhang, Ph.D.
+
+Professor in "100-Talent Program" of CAS
+Laboratory of Computational Biology and Bioinformatics
+Beijing Institute of Genomics, Chinese Academy of Sciences (CAS)
+No.1 Beichen West Road
+Chaoyang District, Beijing 100101
+China
+
+Tel: +86 (10) 8409-7261
+Fax: +86 (10) 8409-7298
+Email: zhangzhang@big.ac.cn
+Web: http://cbb.big.ac.cn	
