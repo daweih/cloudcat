@@ -24,7 +24,11 @@ Results are listed in the sortable table on the left of main window (No. 1). Vis
 
 There are seven examples listed under the DEMO tab in “input sequence” module. The dnaE-based grouping scheme has been proven biological justified when concerning the correlation between bacteriological features and sequence composition (Wu et al., 2012). Joined CDSs of each bacteria were used as inputs in 5 dnaE-based examples. When the GC content variation is concerned, sequence composition analysis and visualization showed distinct trend of unbalanced codon usage: bacteria with moderate GC content tend to have more balanced codon usage, whereas bacteria with high or low GC content exhibit a bias codon usage pattern. After sorted by GC content in sortable table,  bacteria with similar GC content have higher cosine similarity score in comparison analysis.
 
-Want to learn more?
+## Standalone version
+
+Download the latest standalone package of CAT at [version 1.3](https://github.com/daweih/cloudcat/tree/master/bin/CAT1.3).
+
+## Want to learn more?
 
 - [Wiki Cloud CAT](https://github.com/daweih/cloudcat/wiki)
 - [Help page for Cloud CAT](http://cat.big.ac.cn/help.php)
